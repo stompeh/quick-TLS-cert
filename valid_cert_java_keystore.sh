@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/malleable-c2_valid-ssl-certificates.htm#_Toc65482847
 
 # Use the keytool program to create a Java Keystore file. 
