@@ -13,6 +13,13 @@ echo "Generating cert.csr [private]"
 openssl genrsa -out cert-key.pem 4096
 openssl req -new -sha256 -subj "/CN=Somename" -key cert-key.pem -out cert.csr
 
+# Use a hostname or IP.
+# DNS:<hostname>
+# IP:<ipaddress>
+# Can use multiple lines:
+# echo "subjectAltName=DNS:doop.myserver.com" >> extfile.cnf
+# echo "subjectAltName=DNS:files.myserver.com" >> extfile.cnf
+# echo "subjectAltName=IP:10.10.15.15" >> extfile.cnf
 echo "subjectAltName=IP:10.8.0.175" >> extfile.cnf
 
 echo "Generating SSL/TLS cert:"
